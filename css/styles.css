@@ -8240,4 +8240,191 @@ readers do not read off random characters that represent icons */
 .fab {
   font-family: 'Font Awesome 5 Brands';
 }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 400 1.6rem/1.375 "Open Sans", sans-serif;
+  height: 100%;
+  background-color: #2D0042;
+  color: #FEF7F2;
+}
+
+body .container {
+  padding: 0 2rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+body h1, body h2, body h3, body h4 {
+  font: 300 1.6rem/1 "Nunito", sans-serif;
+}
+
+body h1 {
+  font-size: 3.2rem;
+}
+
+@media (min-width: 769px) {
+  body h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 993px) {
+  body h1 {
+    font-size: 4.8rem;
+  }
+}
+
+body h2 {
+  font-size: 2.6rem;
+}
+
+@media (min-width: 769px) {
+  body h2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 993px) {
+  body h2 {
+    font-size: 3.6rem;
+  }
+}
+
+body h3 {
+  font-size: 2.2rem;
+}
+
+@media (min-width: 769px) {
+  body h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 993px) {
+  body h3 {
+    font-size: 2.8rem;
+  }
+}
+
+body h4 {
+  font-size: 1.8rem;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+body header {
+  border-top: 1rem solid #FEF7F2;
+  border-left: 1rem solid #FEF7F2;
+  border-right: 1rem solid #FEF7F2;
+}
+
+body header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body header .logo, body header .menu {
+  width: 50%;
+}
+
+body header .logo span {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: #51EBC8;
+  color: #2D0042;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: -1rem;
+  -webkit-box-shadow: 0 0 0.5rem #2D0042;
+  box-shadow: 0 0 0.5rem #2D0042;
+}
+
+body header .menu {
+  text-align: right;
+}
+
+body header .menu button {
+  border: 0;
+  background-color: transparent;
+  margin-top: 1.5rem;
+}
+
+body header .menu button span {
+  display: block;
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #FEF7F2;
+  margin-bottom: 1rem;
+}
+
+body main {
+  border-left: 1rem solid #FEF7F2;
+  border-right: 1rem solid #FEF7F2;
+  border-bottom: 1rem solid #FEF7F2;
+}
+
+body footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+body footer p {
+  font-size: 1.4rem;
+}
+
+#home #hero {
+  height: calc(100vh - 6.7rem);
+  background: linear-gradient(120deg, #2D0042, #650042);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#home #hero h1 {
+  text-align: center;
+}
+
+#home #hero h1 span {
+  display: block;
+  font-size: 1.6rem;
+  color: #51EBC8;
+  text-align: right;
+}
+
+#home .grad-bg {
+  background: linear-gradient(320deg, #2D0042, #650042);
+}
 /*# sourceMappingURL=styles.css.map */

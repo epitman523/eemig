@@ -8,5 +8,150 @@
 @import "../vendor/fontawesome/scss/regular.scss";
 @import "../vendor/fontawesome/scss/brands.scss";
 //---------------------
-//GLOBAL STYLES
+//    GLOBAL STYLES
 //---------------------
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font: $body-font;
+    height: 100%;
+    background-color: $primary;
+    color: $white;
+    
+
+    .container {
+        padding: 0 2rem;
+        margin:0 auto;
+        width: 100%;
+    }
+
+    h1, h2, h3, h4 {
+        font: $heading-font;
+    }
+    h1 {
+        font-size: 3.2rem;
+        @include mq(md) {
+            font-size: 4rem;
+        }
+        @include mq(lg) {
+            font-size: 4.8rem;
+        }
+    }
+    h2 {
+        font-size: 2.6rem;
+        @include mq(md) {
+            font-size: 3.2rem;
+        }
+        @include mq(lg) {
+            font-size: 3.6rem
+        }
+    }
+    h3 {
+        font-size: 2.2rem;
+        @include mq(md) {
+            font-size: 2.4rem;
+        }
+        @include mq(lg) {
+            font-size: 2.8rem;
+        }
+    }
+    h4 {
+        font-size: 1.8rem;
+    }
+    ul {
+        list-style-type: none;
+    }
+
+    header {
+        border-top: 1rem solid $white;
+        border-left: 1rem solid $white;
+        border-right: 1rem solid $white;
+        .container {
+            @include flexbox;
+            @include justify-content(space-between);
+        }
+        .logo, .menu {
+            width: 50%;
+        }
+        .logo {
+            span {
+                display: block;
+                width: 5rem;
+                height: 5rem;
+                background-color: $accent;
+                color: $primary;
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
+                font-weight: 700;
+                font-size: 2rem;
+                margin-top: -1rem;
+                @include box-shadow(0, 0, 0.5rem, $primary);
+            }
+        }
+        .menu {
+            text-align: right;
+            button {
+                border: 0;
+                background-color: transparent;
+                margin-top: 1.5rem;
+
+                span {
+                    display: block;
+                    width: 3rem;
+                    height: 0.2rem;
+                    background-color: $white;
+                    margin-bottom: 1rem;
+                }
+            }
+            
+        }
+    }
+    main {
+        border-left: 1rem solid $white;
+        border-right: 1rem solid $white;
+        border-bottom: 1rem solid $white;
+    }
+    footer {
+        text-align: center;
+        padding: 1rem 0;
+        
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+//---------------------
+//        HOME
+//---------------------
+#home {
+    #hero {
+        height: calc(100vh - 6.7rem);
+        background: linear-gradient(120deg, $primary, $secondary);
+        @include flexbox;
+        @include justify-content(flex-end);
+        @include align-items(center);
+        
+        h1 {
+            text-align: center;
+            span {
+                display: block;
+                font-size: 1.6rem;
+                color: $accent;
+                text-align: right;
+            }
+        }
+    }
+    .grad-bg {
+        background: linear-gradient(320deg, $primary, $secondary);
+    }
+    #intro {
+        
+    }
+}
