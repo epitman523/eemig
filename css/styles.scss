@@ -164,13 +164,14 @@ body {
 #home {
     #hero {
         height: calc(100vh - 6.7rem);
-        background: linear-gradient(120deg, $primary, $secondary);
+        
         @include flexbox;
         @include justify-content(flex-end);
         @include align-items(center);
+        @include linear-gradient($primary, $secondary);
         
         h1 {
-            font-size: 3rem;
+            text-align: center;
             span {
                 display: block;
                 font-size: 3rem;
