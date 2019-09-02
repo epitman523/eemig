@@ -8439,7 +8439,7 @@ body .accent-font {
 
 #home #hero {
   height: 100vh;
-  margin-top: -6.7rem;
+  margin-top: -5.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8461,6 +8461,15 @@ body .accent-font {
   font-size: 3rem;
   color: #51EBC8;
   margin-top: 1rem;
+}
+
+@media (min-width: 451px) {
+  #home #hero h1 {
+    font-size: 6rem;
+  }
+  #home #hero h1 span {
+    font-size: 4rem;
+  }
 }
 
 #home #intro {
@@ -8508,6 +8517,35 @@ body .accent-font {
 
 #home #intro .text p {
   margin-bottom: 2rem;
+}
+
+@media (min-width: 451px) {
+  #home #intro .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  #home #intro .container .greeting {
+    width: 50%;
+  }
+  #home #intro .container .text {
+    width: 80%;
+  }
+  #home #intro .container .text::before {
+    width: 95%;
+    margin-left: -1rem;
+  }
+  #home #intro .container .img-container {
+    width: 20%;
+  }
+  #home #intro .container a {
+    margin: 0 auto;
+  }
 }
 
 #home #sel-work {

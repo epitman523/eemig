@@ -166,7 +166,7 @@ body {
     }
     #hero {
         height: 100vh;
-        margin-top: -6.7rem;
+        margin-top: -5.7rem;
         @include flexbox;
         @include justify-content(flex-end);
         @include align-items(center);
@@ -179,6 +179,15 @@ body {
                 font-size: 3rem;
                 color: $accent;
                 margin-top: 1rem;
+            }
+        }
+        @include mq(sm) {
+            h1 {
+                font-size: 6rem;
+
+                span {
+                    font-size: 4rem;
+                }
             }
         }
     }
@@ -223,6 +232,32 @@ body {
             p {
                 margin-bottom: 2rem;
             }
+        }
+        @include mq(sm) {
+            .container {
+                @include flexbox;
+                @include flex-wrap(wrap);
+                @include justify-content(space-between);
+
+                .greeting {
+                    width: 50%;
+                }
+                .text {
+                    width: 80%;
+                    &::before {
+                        width: 95%;
+                        margin-left: -1rem;
+                    }
+                }
+                .img-container{
+                    width: 20%;
+                }
+                a {
+                    margin: 0 auto;
+                }
+            }
+            
+            
         }
     }
     #sel-work {
