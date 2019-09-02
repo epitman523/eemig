@@ -8434,11 +8434,12 @@ body .accent-font {
 }
 
 #home .grad-bg {
-  background: linear-gradient(320deg, #2D0042, #650042);
+  background: linear-gradient(320deg, #2D0042, #980062);
 }
 
 #home #hero {
-  height: calc(100vh - 6.7rem);
+  height: 100vh;
+  margin-top: -6.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8448,9 +8449,7 @@ body .accent-font {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #650042;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2D0042), to(#650042));
-  background: linear-gradient(#2D0042, #650042);
+  background: linear-gradient(120deg, #2D0042, #980062);
 }
 
 #home #hero h1 {
@@ -8596,9 +8595,57 @@ body .accent-font {
   background-color: #51EBC8;
   border-top: 1rem solid #FEF7F2;
   padding: 6rem 3rem;
+  position: relative;
 }
 
-#home #connect h2 {
+#home #connect .left {
+  margin-bottom: 2rem;
+}
+
+#home #connect .left h2 {
   color: #2D0042;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+#home #connect .left p {
+  font: 400 1.6rem/1 "Grand Hotel", cursive;
+  font-size: 2rem;
+  color: #2D0042;
+}
+
+#home #connect .right {
+  position: relative;
+}
+
+#home #connect .right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#home #connect .right ul li {
+  margin: 0 2.5rem;
+}
+
+#home #connect .right ul li a {
+  color: #2D0042;
+  font-size: 3rem;
+}
+
+#home #connect .right span {
+  display: block;
+  height: 0.2rem;
+  background-color: #980062;
+  position: absolute;
+  left: 0;
+  right: -6rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -165,12 +165,12 @@ body {
         background: linear-gradient(320deg, $primary, $secondary);
     }
     #hero {
-        height: calc(100vh - 6.7rem);
-        
+        height: 100vh;
+        margin-top: -6.7rem;
         @include flexbox;
         @include justify-content(flex-end);
         @include align-items(center);
-        @include linear-gradient($primary, $secondary);
+        background: linear-gradient(120deg, $primary, $secondary);
         
         h1 {
             text-align: center;
@@ -191,7 +191,6 @@ body {
                 color: $accent;
                 font-size: 3rem;
             }
-            
         }
         .text {
             background-color: $white;
@@ -298,10 +297,45 @@ body {
         background-color: $accent;
         border-top: 1rem solid $white;
         padding: 6rem 3rem;
+        position: relative;
 
-        h2 {
-            color: $primary;
+        .left {
+            margin-bottom: 2rem;
+            h2 {
+                color: $primary;
+                font-size: 4rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                font: $accent-font;
+                font-size: 2rem;
+                color: $primary;
+            }
         }
-        
+        .right {
+            position: relative;
+            ul {
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
+                margin-bottom: 2rem;
+
+                li {
+                    margin: 0 2.5rem;
+                    a {
+                        color: $primary;
+                        font-size: 3rem;
+                    }
+                }
+            }
+            span {
+                display: block;
+                height: 0.2rem;
+                background-color: $secondary;
+                position: absolute;
+                left: 0;
+                right: -6rem;
+            }
+        }
     }
 }
