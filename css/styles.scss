@@ -29,6 +29,9 @@ body {
         padding: 0 2rem;
         margin:0 auto;
         width: 100%;
+        @include mq(md) {
+            padding: 0 6rem;
+        }
     }
 
     h1, h2, h3, h4 {
@@ -78,6 +81,7 @@ body {
         border-top: 1rem solid $white;
         border-left: 1rem solid $white;
         border-right: 1rem solid $white;
+        
         .container {
             @include flexbox;
             @include justify-content(space-between);
@@ -118,11 +122,29 @@ body {
                 }
             }
         }
+        @include mq(md) {
+            border-top: 1.5rem solid $white;
+            border-left: 1.5rem solid $white;
+            border-right: 1.5rem solid $white;
+
+            .logo {
+                span {
+                    width: 7rem;
+                    height: 7rem;
+                    margin-top: -1.5rem;
+                }
+            }
+        }
     }
     main {
         border-left: 1rem solid $white;
         border-right: 1rem solid $white;
         border-bottom: 1rem solid $white;
+        @include mq(md) {
+            border-top: 1.5rem solid $white;
+            border-left: 1.5rem solid $white;
+            border-right: 1.5rem solid $white;
+        }
     }
     footer {
         text-align: center;
@@ -181,12 +203,13 @@ body {
                 margin-top: 1rem;
             }
         }
-        @include mq(sm) {
+        @include mq(md) {
+            margin-top: -7.1rem;
             h1 {
-                font-size: 6rem;
+                font-size: 8rem;
 
                 span {
-                    font-size: 4rem;
+                    font-size: 6rem;
                 }
             }
         }
@@ -233,17 +256,23 @@ body {
                 margin-bottom: 2rem;
             }
         }
-        @include mq(sm) {
+        @include mq(md) {
+            padding: 20rem 0 20rem;
+            h2 {
+                font-size: 4.8rem;
+            }
             .container {
                 @include flexbox;
                 @include flex-wrap(wrap);
                 @include justify-content(space-between);
 
                 .greeting {
-                    width: 50%;
+                    width: 70%;
                 }
                 .text {
                     width: 80%;
+                    margin: 0 0 5rem -7.5rem;
+                    padding: 8rem 6rem;
                     &::before {
                         width: 95%;
                         margin-left: -1rem;
@@ -270,7 +299,8 @@ body {
         }
         .container {
             @include flexbox;
-            @include flex-wrap(wrap)
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
         }
         .work {
             background-color: $white;
@@ -327,6 +357,18 @@ body {
         .btn {
             margin: 0 auto;
         }
+        @include mq(md) {
+            h2 {
+                margin: 0 6rem;
+                font-size: 6rem;
+            }
+            > .h-line {
+                margin-left: 6rem;
+            }
+            .work {
+                width: calc(50% - 1.5rem);
+            }
+        }
     }
     #connect {
         background-color: $accent;
@@ -336,6 +378,7 @@ body {
 
         .left {
             margin-bottom: 2rem;
+            width: 100%;
             h2 {
                 color: $primary;
                 font-size: 4rem;
@@ -370,6 +413,29 @@ body {
                 position: absolute;
                 left: 0;
                 right: -6rem;
+            }
+        }
+        @include mq(md) {
+            padding: 10rem 8rem;
+            .container {
+                @include flexbox;
+                @include justify-content(space-between);
+                @include align-items(flex-end);
+            }
+            .left {
+                width: auto;
+                margin-bottom: -0.6rem;
+                margin-right: 3rem;
+
+                h2 {
+                    font-size: 6rem;
+                }
+                p {
+                    text-align: right;
+                }
+            }
+            .right {
+                width: 100%;
             }
         }
     }

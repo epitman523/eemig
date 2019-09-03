@@ -8265,6 +8265,12 @@ body .container {
   width: 100%;
 }
 
+@media (min-width: 769px) {
+  body .container {
+    padding: 0 6rem;
+  }
+}
+
 body h1, body h2, body h3, body h4 {
   font: 900 1.6rem/1 "Nunito Sans", sans-serif;
   text-transform: uppercase;
@@ -8391,10 +8397,31 @@ body header .menu button span {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 769px) {
+  body header {
+    border-top: 1.5rem solid #FEF7F2;
+    border-left: 1.5rem solid #FEF7F2;
+    border-right: 1.5rem solid #FEF7F2;
+  }
+  body header .logo span {
+    width: 7rem;
+    height: 7rem;
+    margin-top: -1.5rem;
+  }
+}
+
 body main {
   border-left: 1rem solid #FEF7F2;
   border-right: 1rem solid #FEF7F2;
   border-bottom: 1rem solid #FEF7F2;
+}
+
+@media (min-width: 769px) {
+  body main {
+    border-top: 1.5rem solid #FEF7F2;
+    border-left: 1.5rem solid #FEF7F2;
+    border-right: 1.5rem solid #FEF7F2;
+  }
 }
 
 body footer {
@@ -8463,12 +8490,15 @@ body .accent-font {
   margin-top: 1rem;
 }
 
-@media (min-width: 451px) {
+@media (min-width: 769px) {
+  #home #hero {
+    margin-top: -7.1rem;
+  }
   #home #hero h1 {
-    font-size: 6rem;
+    font-size: 8rem;
   }
   #home #hero h1 span {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 }
 
@@ -8519,7 +8549,13 @@ body .accent-font {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 451px) {
+@media (min-width: 769px) {
+  #home #intro {
+    padding: 20rem 0 20rem;
+  }
+  #home #intro h2 {
+    font-size: 4.8rem;
+  }
   #home #intro .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8531,10 +8567,12 @@ body .accent-font {
     justify-content: space-between;
   }
   #home #intro .container .greeting {
-    width: 50%;
+    width: 70%;
   }
   #home #intro .container .text {
     width: 80%;
+    margin: 0 0 5rem -7.5rem;
+    padding: 8rem 6rem;
   }
   #home #intro .container .text::before {
     width: 95%;
@@ -8566,6 +8604,9 @@ body .accent-font {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 #home #sel-work .work {
@@ -8629,6 +8670,19 @@ body .accent-font {
   margin: 0 auto;
 }
 
+@media (min-width: 769px) {
+  #home #sel-work h2 {
+    margin: 0 6rem;
+    font-size: 6rem;
+  }
+  #home #sel-work > .h-line {
+    margin-left: 6rem;
+  }
+  #home #sel-work .work {
+    width: calc(50% - 1.5rem);
+  }
+}
+
 #home #connect {
   background-color: #51EBC8;
   border-top: 1rem solid #FEF7F2;
@@ -8638,6 +8692,7 @@ body .accent-font {
 
 #home #connect .left {
   margin-bottom: 2rem;
+  width: 100%;
 }
 
 #home #connect .left h2 {
@@ -8685,5 +8740,36 @@ body .accent-font {
   position: absolute;
   left: 0;
   right: -6rem;
+}
+
+@media (min-width: 769px) {
+  #home #connect {
+    padding: 10rem 8rem;
+  }
+  #home #connect .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  #home #connect .left {
+    width: auto;
+    margin-bottom: -0.6rem;
+    margin-right: 3rem;
+  }
+  #home #connect .left h2 {
+    font-size: 6rem;
+  }
+  #home #connect .left p {
+    text-align: right;
+  }
+  #home #connect .right {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
