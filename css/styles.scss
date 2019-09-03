@@ -21,8 +21,8 @@ html {
 body {
     font: $body-font;
     height: 100%;
-    background-color: $primary;
-    color: $white;
+    background-color: $white;
+    color: $primary;
     
 
     .container {
@@ -32,12 +32,16 @@ body {
         @include mq(md) {
             padding: 0 6rem;
         }
+        @include mq(lg) {
+            padding: 0 8rem;
+        }
     }
 
     h1, h2, h3, h4 {
         font: $heading-font;
         text-transform: uppercase;
         font-weight: 700;
+        color: $white;
     }
     h1 {
         font-size: 3.2rem;
@@ -141,7 +145,7 @@ body {
         border-right: 1rem solid $white;
         border-bottom: 1rem solid $white;
         @include mq(md) {
-            border-top: 1.5rem solid $white;
+            border-bottom: 1.5rem solid $white;
             border-left: 1.5rem solid $white;
             border-right: 1.5rem solid $white;
         }
@@ -149,9 +153,11 @@ body {
     footer {
         text-align: center;
         padding: 1rem 0;
+        background-color: $primary;
         
         p {
             font-size: 1.4rem;
+            color: $white;
         }
     }
     .h-line {
@@ -204,7 +210,7 @@ body {
             }
         }
         @include mq(md) {
-            margin-top: -7.1rem;
+            
             h1 {
                 font-size: 8rem;
 
@@ -250,6 +256,7 @@ body {
 
             h3 {
                 margin-bottom: 3rem;
+                color: $primary;
             }
 
             p {
@@ -265,28 +272,31 @@ body {
                 @include flexbox;
                 @include flex-wrap(wrap);
                 @include justify-content(space-between);
-
-                .greeting {
-                    width: 70%;
-                }
-                .text {
-                    width: 80%;
-                    margin: 0 0 5rem -7.5rem;
-                    padding: 8rem 6rem;
-                    &::before {
-                        width: 95%;
-                        margin-left: -1rem;
-                    }
-                }
-                .img-container{
-                    width: 20%;
-                }
-                a {
-                    margin: 0 auto;
+            }
+            .greeting {
+                width: 70%;
+            }
+            .text {
+                width: 80%;
+                margin: 0 0 5rem -7.5rem;
+                padding: 8rem 6rem;
+                &::before {
+                    width: 95%;
+                    margin-left: -1rem;
                 }
             }
+            .img-container{
+                width: 20%;
+            }
+            a {
+                margin: 0 auto;
+            }
             
-            
+        }
+        @include mq(lg) {
+            .text, .img-container {
+                width: 50%;
+            }
         }
     }
     #sel-work {
@@ -308,7 +318,7 @@ body {
             overflow: hidden;
             
             @include box-shadow(0, 0, 1rem, $primary);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             
             a {
                 display: block;
@@ -333,6 +343,7 @@ body {
                 }
                 h3 {
                     margin-bottom: 3rem;
+                    color: $primary;
                 }
 
                 ul {
@@ -360,13 +371,26 @@ body {
         @include mq(md) {
             h2 {
                 margin: 0 6rem;
-                font-size: 6rem;
+                font-size: 4.8rem;
             }
             > .h-line {
                 margin-left: 6rem;
             }
             .work {
                 width: calc(50% - 1.5rem);
+            }
+        }
+        @include mq(lg) {
+            .work:nth-child(1), .work:nth-child(4) {
+                width: calc(60% - 1.5rem)
+            }
+            .work:nth-child(2), .work:nth-child(3) {
+                width: calc(40% - 1.5rem)
+            }
+            .work {
+                a {
+                    padding: 6rem 4rem;
+                }
             }
         }
     }
@@ -417,6 +441,7 @@ body {
         }
         @include mq(md) {
             padding: 10rem 8rem;
+            border-top: 1.5rem solid $white;
             .container {
                 @include flexbox;
                 @include justify-content(space-between);
@@ -436,6 +461,10 @@ body {
             }
             .right {
                 width: 100%;
+
+                span {
+                    right: -14rem;
+                }
             }
         }
     }
