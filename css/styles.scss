@@ -201,6 +201,9 @@ body {
         }
     }
     main {
+        .grad-bg {
+            background: linear-gradient(320deg, $primary, $secondary);
+        }
         border-left: 1rem solid $white;
         border-right: 1rem solid $white;
         border-bottom: 1rem solid $white;
@@ -208,6 +211,106 @@ body {
             border-bottom: 1.5rem solid $white;
             border-left: 1.5rem solid $white;
             border-right: 1.5rem solid $white;
+        }
+        #hero {
+            height: 100vh;
+            margin-top: -5.7rem;
+            background: linear-gradient(120deg, $primary, $secondary);
+            @include flexbox;
+            @include align-items(center);
+            
+            @include mq(md) {
+                h1 {
+                    font-size: 8rem;
+                }
+            }
+        }
+        #connect {
+            background-color: $accent;
+            border-top: 1rem solid $white;
+            padding: 6rem 0;
+            position: relative;
+    
+            .left {
+                margin: 0 2rem 3rem 3rem;
+                h2 {
+                    color: $primary;
+                    font-size: 4rem;
+                    margin-bottom: 1rem;
+                }
+                p {
+                    font: $accent-font;
+                    font-size: 2rem;
+                    color: $primary;
+                }
+            }
+            .right {
+                position: relative;
+                ul {
+                    @include flexbox;
+                    @include justify-content(center);
+                    @include align-items(center);
+                    margin-bottom: 2rem;
+    
+                    li {
+                        margin: 0 2.5rem;
+                        a {
+                            color: $primary;
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+            .h-line {
+                background-color: $secondary;
+                position: absolute;
+                margin: 0;
+                width: initial;
+                right: -1rem;
+                left: 5rem;
+                
+            }
+            @include mq(md) {
+                padding: 10rem 8rem;
+                border-top: 1.5rem solid $white;
+                
+                @include flexbox;
+                @include justify-content(flex-end);
+                @include align-items(flex-end);
+                
+                .left {
+                    width: 50%;
+                    padding-right: 1.5rem;
+                    margin-bottom: -0.6rem;
+                    text-align: right;
+                    
+                    h2 {
+                        font-size: 6rem;
+                    }
+                    p {
+                        font-size: 3rem;
+                    }
+                }
+                .right {
+                    width: 50%;
+                    a {
+                        
+                    }
+                }
+                .h-line {
+                    left: 55%;
+                    right: -1.5rem;
+                    margin-left: 1.5rem;
+                }
+            }
+            @include mq(lg) {
+                padding: 12rem 10rem;
+                .left {
+                    h2 {
+                        font-size: 8rem;
+                    }
+                }
+            }
         }
     }
     footer {
@@ -249,17 +352,7 @@ body {
 //        HOME
 //---------------------
 #home {
-    .grad-bg {
-        background: linear-gradient(320deg, $primary, $secondary);
-    }
     #hero {
-        height: 100vh;
-        margin-top: -5.7rem;
-        @include flexbox;
-        @include justify-content(flex-end);
-        @include align-items(center);
-        background: linear-gradient(120deg, $primary, $secondary);
-        
         h1 {
             text-align: center;
             span {
@@ -270,10 +363,7 @@ body {
             }
         }
         @include mq(md) {
-            
             h1 {
-                font-size: 8rem;
-
                 span {
                     font-size: 6rem;
                 }
@@ -291,34 +381,17 @@ body {
             }
         }
         .text {
-            background-color: $white;
+            @include white-panel;
             @include box-shadow(0, 0, 1rem, $primary);
-            color: $primary;
-            margin: 0 -3rem 5rem;
-            padding: 4rem 3rem;
-            position: relative;
-
+            
             &::before {
-                content: ' ';
-                display: block;
-                margin: 0 auto;
+                @include panel-bottom;
                 width: 80%;
-                height: 2rem;
-                background: linear-gradient(to left, $accent, rgba(81, 235, 200, 0.2));
-                -webkit-box-shadow: inset 0px 10px 5px -10px rgba(45,0,66,0.75);
-                -moz-box-shadow: inset 0px 10px 5px -10px rgba(45,0,66,0.75);
-                box-shadow: inset 0px 10px 5px -10px rgba(45,0,66,0.75);
-                position: absolute;
-                bottom: -2rem;
-                left: 0;
-                right: 0;
             }
-
             h3 {
                 margin-bottom: 3rem;
                 color: $primary;
             }
-
             p {
                 margin-bottom: 2rem;
             }
@@ -462,91 +535,16 @@ body {
             }
         }
     }
-    #connect {
-        background-color: $accent;
-        border-top: 1rem solid $white;
-        padding: 6rem 0;
-        position: relative;
-
-        .left {
-            margin: 0 2rem 3rem 3rem;
-            h2 {
-                color: $primary;
-                font-size: 4rem;
-                margin-bottom: 1rem;
-            }
-            p {
-                font: $accent-font;
-                font-size: 2rem;
-                color: $primary;
-            }
-        }
-        .right {
-            position: relative;
-            ul {
-                @include flexbox;
-                @include justify-content(center);
-                @include align-items(center);
-                margin-bottom: 2rem;
-
-                li {
-                    margin: 0 2.5rem;
-                    a {
-                        color: $primary;
-                        font-size: 3rem;
-                    }
-                }
-            }
-        }
-        .h-line {
-            background-color: $secondary;
-            position: absolute;
-            margin: 0;
-            width: initial;
-            right: -1rem;
-            left: 5rem;
-            
-        }
-        @include mq(md) {
-            padding: 10rem 8rem;
-            border-top: 1.5rem solid $white;
-            
-            @include flexbox;
-            @include justify-content(flex-end);
-            @include align-items(flex-end);
-            
-            .left {
-                width: 50%;
-                padding-right: 1.5rem;
-                margin-bottom: -0.6rem;
-                text-align: right;
-                
-                h2 {
-                    font-size: 6rem;
-                }
-                p {
-                    font-size: 3rem;
-                }
-            }
-            .right {
-                width: 50%;
-                a {
-                    
-                }
-            }
-            .h-line {
-                left: 55%;
-                right: -1.5rem;
-                margin-left: 1.5rem;
-            }
-        }
-        @include mq(lg) {
-            padding: 12rem 10rem;
-            .left {
-                h2 {
-                    font-size: 8rem;
-                }
-            }
+}
+//---------------------
+//       ABOUT
+//---------------------
+#about {
+    #hero {
+        p {
+            font: $accent-font;
+            font-size: 3rem;
+            color: $accent;
         }
     }
 }

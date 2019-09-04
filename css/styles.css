@@ -8487,11 +8487,136 @@ body main {
   border-bottom: 1rem solid #FEF7F2;
 }
 
+body main .grad-bg {
+  background: linear-gradient(320deg, #2D0042, #980062);
+}
+
 @media (min-width: 769px) {
   body main {
     border-bottom: 1.5rem solid #FEF7F2;
     border-left: 1.5rem solid #FEF7F2;
     border-right: 1.5rem solid #FEF7F2;
+  }
+}
+
+body main #hero {
+  height: 100vh;
+  margin-top: -5.7rem;
+  background: linear-gradient(120deg, #2D0042, #980062);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  body main #hero h1 {
+    font-size: 8rem;
+  }
+}
+
+body main #connect {
+  background-color: #51EBC8;
+  border-top: 1rem solid #FEF7F2;
+  padding: 6rem 0;
+  position: relative;
+}
+
+body main #connect .left {
+  margin: 0 2rem 3rem 3rem;
+}
+
+body main #connect .left h2 {
+  color: #2D0042;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+body main #connect .left p {
+  font: 400 1.6rem/1 "Grand Hotel", cursive;
+  font-size: 2rem;
+  color: #2D0042;
+}
+
+body main #connect .right {
+  position: relative;
+}
+
+body main #connect .right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+body main #connect .right ul li {
+  margin: 0 2.5rem;
+}
+
+body main #connect .right ul li a {
+  color: #2D0042;
+  font-size: 3rem;
+}
+
+body main #connect .h-line {
+  background-color: #980062;
+  position: absolute;
+  margin: 0;
+  width: initial;
+  right: -1rem;
+  left: 5rem;
+}
+
+@media (min-width: 769px) {
+  body main #connect {
+    padding: 10rem 8rem;
+    border-top: 1.5rem solid #FEF7F2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  body main #connect .left {
+    width: 50%;
+    padding-right: 1.5rem;
+    margin-bottom: -0.6rem;
+    text-align: right;
+  }
+  body main #connect .left h2 {
+    font-size: 6rem;
+  }
+  body main #connect .left p {
+    font-size: 3rem;
+  }
+  body main #connect .right {
+    width: 50%;
+  }
+  body main #connect .h-line {
+    left: 55%;
+    right: -1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 993px) {
+  body main #connect {
+    padding: 12rem 10rem;
+  }
+  body main #connect .left h2 {
+    font-size: 8rem;
   }
 }
 
@@ -8533,25 +8658,6 @@ body .accent-font {
   text-transform: initial;
 }
 
-#home .grad-bg {
-  background: linear-gradient(320deg, #2D0042, #980062);
-}
-
-#home #hero {
-  height: 100vh;
-  margin-top: -5.7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: linear-gradient(120deg, #2D0042, #980062);
-}
-
 #home #hero h1 {
   text-align: center;
 }
@@ -8564,9 +8670,6 @@ body .accent-font {
 }
 
 @media (min-width: 769px) {
-  #home #hero h1 {
-    font-size: 8rem;
-  }
   #home #hero h1 span {
     font-size: 6rem;
   }
@@ -8587,19 +8690,18 @@ body .accent-font {
 
 #home #intro .text {
   background-color: #FEF7F2;
-  -webkit-box-shadow: 0 0 1rem #2D0042;
-  box-shadow: 0 0 1rem #2D0042;
   color: #2D0042;
   margin: 0 -3rem 5rem;
   padding: 4rem 3rem;
   position: relative;
+  -webkit-box-shadow: 0 0 1rem #2D0042;
+  box-shadow: 0 0 1rem #2D0042;
 }
 
 #home #intro .text::before {
   content: ' ';
   display: block;
   margin: 0 auto;
-  width: 80%;
   height: 2rem;
   background: -webkit-gradient(linear, right top, left top, from(#51EBC8), to(rgba(81, 235, 200, 0.2)));
   background: linear-gradient(to left, #51EBC8, rgba(81, 235, 200, 0.2));
@@ -8609,6 +8711,7 @@ body .accent-font {
   bottom: -2rem;
   left: 0;
   right: 0;
+  width: 80%;
 }
 
 #home #intro .text h3 {
@@ -8781,106 +8884,9 @@ body .accent-font {
   }
 }
 
-#home #connect {
-  background-color: #51EBC8;
-  border-top: 1rem solid #FEF7F2;
-  padding: 6rem 0;
-  position: relative;
-}
-
-#home #connect .left {
-  margin: 0 2rem 3rem 3rem;
-}
-
-#home #connect .left h2 {
-  color: #2D0042;
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-#home #connect .left p {
+#about #hero p {
   font: 400 1.6rem/1 "Grand Hotel", cursive;
-  font-size: 2rem;
-  color: #2D0042;
-}
-
-#home #connect .right {
-  position: relative;
-}
-
-#home #connect .right ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-#home #connect .right ul li {
-  margin: 0 2.5rem;
-}
-
-#home #connect .right ul li a {
-  color: #2D0042;
   font-size: 3rem;
-}
-
-#home #connect .h-line {
-  background-color: #980062;
-  position: absolute;
-  margin: 0;
-  width: initial;
-  right: -1rem;
-  left: 5rem;
-}
-
-@media (min-width: 769px) {
-  #home #connect {
-    padding: 10rem 8rem;
-    border-top: 1.5rem solid #FEF7F2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
-  #home #connect .left {
-    width: 50%;
-    padding-right: 1.5rem;
-    margin-bottom: -0.6rem;
-    text-align: right;
-  }
-  #home #connect .left h2 {
-    font-size: 6rem;
-  }
-  #home #connect .left p {
-    font-size: 3rem;
-  }
-  #home #connect .right {
-    width: 50%;
-  }
-  #home #connect .h-line {
-    left: 55%;
-    right: -1.5rem;
-    margin-left: 1.5rem;
-  }
-}
-
-@media (min-width: 993px) {
-  #home #connect {
-    padding: 12rem 10rem;
-  }
-  #home #connect .left h2 {
-    font-size: 8rem;
-  }
+  color: #51EBC8;
 }
 /*# sourceMappingURL=styles.css.map */
