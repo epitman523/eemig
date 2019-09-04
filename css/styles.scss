@@ -21,7 +21,7 @@ html {
 body {
     font: $body-font;
     height: 100%;
-    background-color: $white;
+    background-color: $primary;
     color: $primary;
     
 
@@ -35,6 +35,12 @@ body {
         @include mq(lg) {
             padding: 0 8rem;
         }
+    }
+    .show {
+        display: block;
+    }
+    .hide {
+        display: none;
     }
 
     h1, h2, h3, h4 {
@@ -80,7 +86,61 @@ body {
     ul {
         list-style-type: none;
     }
+    #myNav {
+        &.overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            background-color: $white;
+            overflow-x: hidden;
+            transition: 0.3s;
 
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 3rem;
+            }
+            a {
+                font: $heading-font;
+                padding: 0.8rem;
+                text-decoration: none;
+                font-size: 3.6rem;
+                color: $primary;
+                display: block;
+                transition: 0.3s;
+
+                &:hover, &:focus {
+                    color: $secondary;
+                }
+                &.closebtn {
+                    font: $body-font;
+                    position: absolute;
+                    top: 0;
+                    right: 2rem;
+                    font-size: 6rem;
+                    line-height: 1;
+                }
+            }
+            
+
+            @include mq(sm-only) {
+                a {
+                    font-size: 2rem;
+
+                }
+                &.closebtn {
+                    font-size: 4rem;
+                    top: 1.5rem;
+                    right: 3.5rem;
+                }
+            }
+        }
+    }
     header {
         border-top: 1rem solid $white;
         border-left: 1rem solid $white;
@@ -294,8 +354,16 @@ body {
             
         }
         @include mq(lg) {
+            .greeting {
+                width: 50%;
+                margin-right: 50%;
+            }
             .text, .img-container {
                 width: 50%;
+            }
+            .text {
+                margin-left: -9.5rem;
+                padding: 10rem 9.5rem;
             }
         }
     }
@@ -397,12 +465,11 @@ body {
     #connect {
         background-color: $accent;
         border-top: 1rem solid $white;
-        padding: 6rem 3rem;
+        padding: 6rem 0;
         position: relative;
 
         .left {
-            margin-bottom: 2rem;
-            width: 100%;
+            margin: 0 2rem 3rem 3rem;
             h2 {
                 color: $primary;
                 font-size: 4rem;
@@ -430,40 +497,54 @@ body {
                     }
                 }
             }
-            span {
-                display: block;
-                height: 0.2rem;
-                background-color: $secondary;
-                position: absolute;
-                left: 0;
-                right: -6rem;
-            }
+        }
+        .h-line {
+            background-color: $secondary;
+            position: absolute;
+            margin: 0;
+            width: initial;
+            right: -1rem;
+            left: 5rem;
+            
         }
         @include mq(md) {
             padding: 10rem 8rem;
             border-top: 1.5rem solid $white;
-            .container {
-                @include flexbox;
-                @include justify-content(space-between);
-                @include align-items(flex-end);
-            }
+            
+            @include flexbox;
+            @include justify-content(flex-end);
+            @include align-items(flex-end);
+            
             .left {
-                width: auto;
+                width: 50%;
+                padding-right: 1.5rem;
                 margin-bottom: -0.6rem;
-                margin-right: 3rem;
-
+                text-align: right;
+                
                 h2 {
                     font-size: 6rem;
                 }
                 p {
-                    text-align: right;
+                    font-size: 3rem;
                 }
             }
             .right {
-                width: 100%;
-
-                span {
-                    right: -14rem;
+                width: 50%;
+                a {
+                    
+                }
+            }
+            .h-line {
+                left: 55%;
+                right: -1.5rem;
+                margin-left: 1.5rem;
+            }
+        }
+        @include mq(lg) {
+            padding: 12rem 10rem;
+            .left {
+                h2 {
+                    font-size: 8rem;
                 }
             }
         }

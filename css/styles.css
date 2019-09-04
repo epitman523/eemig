@@ -8255,7 +8255,7 @@ html {
 body {
   font: 400 1.6rem/1.375 "Open Sans", sans-serif;
   height: 100%;
-  background-color: #FEF7F2;
+  background-color: #2D0042;
   color: #2D0042;
 }
 
@@ -8275,6 +8275,14 @@ body .container {
   body .container {
     padding: 0 8rem;
   }
+}
+
+body .show {
+  display: block;
+}
+
+body .hide {
+  display: none;
 }
 
 body h1, body h2, body h3, body h4 {
@@ -8343,6 +8351,62 @@ body a {
 
 body ul {
   list-style-type: none;
+}
+
+body #myNav.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  background-color: #FEF7F2;
+  overflow-x: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #myNav.overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+body #myNav.overlay a {
+  font: 900 1.6rem/1 "Nunito Sans", sans-serif;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-size: 3.6rem;
+  color: #2D0042;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #myNav.overlay a:hover, body #myNav.overlay a:focus {
+  color: #980062;
+}
+
+body #myNav.overlay a.closebtn {
+  font: 400 1.6rem/1.375 "Open Sans", sans-serif;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+@media (min-width: 451px) and (max-width: 768px) {
+  body #myNav.overlay a {
+    font-size: 2rem;
+  }
+  body #myNav.overlay.closebtn {
+    font-size: 4rem;
+    top: 1.5rem;
+    right: 3.5rem;
+  }
 }
 
 body header {
@@ -8594,8 +8658,16 @@ body .accent-font {
 }
 
 @media (min-width: 993px) {
+  #home #intro .greeting {
+    width: 50%;
+    margin-right: 50%;
+  }
   #home #intro .text, #home #intro .img-container {
     width: 50%;
+  }
+  #home #intro .text {
+    margin-left: -9.5rem;
+    padding: 10rem 9.5rem;
   }
 }
 
@@ -8712,13 +8784,12 @@ body .accent-font {
 #home #connect {
   background-color: #51EBC8;
   border-top: 1rem solid #FEF7F2;
-  padding: 6rem 3rem;
+  padding: 6rem 0;
   position: relative;
 }
 
 #home #connect .left {
-  margin-bottom: 2rem;
-  width: 100%;
+  margin: 0 2rem 3rem 3rem;
 }
 
 #home #connect .left h2 {
@@ -8759,47 +8830,57 @@ body .accent-font {
   font-size: 3rem;
 }
 
-#home #connect .right span {
-  display: block;
-  height: 0.2rem;
+#home #connect .h-line {
   background-color: #980062;
   position: absolute;
-  left: 0;
-  right: -6rem;
+  margin: 0;
+  width: initial;
+  right: -1rem;
+  left: 5rem;
 }
 
 @media (min-width: 769px) {
   #home #connect {
     padding: 10rem 8rem;
     border-top: 1.5rem solid #FEF7F2;
-  }
-  #home #connect .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
   }
   #home #connect .left {
-    width: auto;
+    width: 50%;
+    padding-right: 1.5rem;
     margin-bottom: -0.6rem;
-    margin-right: 3rem;
+    text-align: right;
   }
   #home #connect .left h2 {
     font-size: 6rem;
   }
   #home #connect .left p {
-    text-align: right;
+    font-size: 3rem;
   }
   #home #connect .right {
-    width: 100%;
+    width: 50%;
   }
-  #home #connect .right span {
-    right: -14rem;
+  #home #connect .h-line {
+    left: 55%;
+    right: -1.5rem;
+    margin-left: 1.5rem;
+  }
+}
+
+@media (min-width: 993px) {
+  #home #connect {
+    padding: 12rem 10rem;
+  }
+  #home #connect .left h2 {
+    font-size: 8rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -12,13 +12,22 @@
 </head>
 
 <body id="home">
+
     <header>
+        <div id="myNav" class="overlay hide">
+            <a href="#" class="closebtn">&times;</a>
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Work</a>
+                <a href="#">Connect</a>
+            </div>
+        </div>
         <div class="container">
             <div class="logo">
                 <span>EE</span>
             </div>
             <div class="menu">
-                <button type="menu">
+                <button type="menu" class="js-menuBtn">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -120,23 +129,21 @@
                 </div>
             </section>
             <section id="connect">
-                <div class="container">
-                    <div class="left">
-                        <h2>Connect</h2>
-                        <p>I'd love to hear from you</p>
-                    </div>
-                    <div class="right">
-                        <ul class="social">
-                            <li><a href="https://www.linkedin.com/in/epitman523/" target="_blank"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="https://github.com/epitman523" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                            </li>
-                            <li><a href="mailto:epitman523@gmail.com"><i class="fal fa-envelope-open-text"></i></a></li>
-                        </ul>
-                        <span></span>
-                    </div>
+
+                <div class="left">
+                    <h2>Connect</h2>
+                    <p>I'd love to hear from you</p>
                 </div>
+                <div class="right">
+                    <ul class="social">
+                        <li><a href="https://www.linkedin.com/in/epitman523/" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/epitman523" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:epitman523@gmail.com"><i class="fal fa-envelope-open-text"></i></a></li>
+                    </ul>
+                </div>
+                <div class="h-line"></div>
 
             </section>
         </div>
@@ -146,6 +153,8 @@
             <p><i class="fal fa-copyright"></i> Copyright <span>2019</span>. All rights reserved.</p>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
 </body>
 
