@@ -148,9 +148,12 @@
 @mixin white-panel {
     background-color: $white;
     color: $primary;
-    margin: 0 -3rem 5rem;
-    padding: 4rem 3rem;
     position: relative;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: 6rem;
+    @include box-shadow(0, 0, 1rem, $primary);
+    
 }
 @mixin panel-bottom {
     content: ' ';

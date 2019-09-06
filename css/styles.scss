@@ -382,8 +382,8 @@ body {
         }
         .text {
             @include white-panel;
-            @include box-shadow(0, 0, 1rem, $primary);
-            
+            //Need to fix margins here !!!!!!!!!!!!!!!!!!!
+
             &::before {
                 @include panel-bottom;
                 width: 80%;
@@ -545,6 +545,103 @@ body {
             font: $accent-font;
             font-size: 3rem;
             color: $accent;
+        }
+    }
+    #personal {
+        padding: 6rem 1rem 8rem;
+        @include white-panel;
+        &::before {
+            @include panel-bottom;
+        }
+        .left {
+            h3 {
+                color: $primary;
+                margin-bottom: 2rem;
+            }
+            > div:first-child {
+                margin-bottom: 4rem;
+            }
+            > div:last-child {
+                margin-bottom: 4rem;
+                .school {
+                    .name {
+                        font-weight: 700;
+                    }
+                    &:last-child {
+                        margin-top: 2rem;
+                    }
+                }
+            }
+        }
+        .right {
+            border-top: 1px solid $secondary;
+            text-align: center;
+            .img-container {
+                width: 15rem;
+                height: 15rem;
+                background-color: #eee;
+                margin: 0 auto 2rem;
+            }
+            p {
+                margin-bottom: 4rem;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+    }
+    #skills {
+        padding: 6rem 0 8rem;
+        
+        .web-dev, .design {
+            h3 {
+                @include flexbox;
+                
+                @include align-items(center);
+                margin-bottom: 2rem;
+                span {
+                    line-height: 1;
+                    background-color: $white;
+                    @include rounded(50%);
+                    @include flexbox;
+                    @include justify-content(center);
+                    @include align-items(center);
+                    margin-right: 1rem;
+                    padding: 0.5rem;
+
+                    i {
+                        color: $primary;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            > ul {
+                li {
+                    margin-bottom: 2rem;
+                    p {
+                        color: $white;
+                        text-transform: uppercase;
+                        margin-bottom: 0.5rem;
+                        font-size: 1.4rem;
+                    }
+                    .bar {
+                        @include rounded;
+                        background-color: $primary;
+                        height: 1rem;
+                        
+
+                        .inner {
+                            @include rounded;
+                            display: block;
+                            height: 1rem;
+                            background-color: $accent;
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .web-dev {
+            margin-bottom: 6rem;
         }
     }
 }

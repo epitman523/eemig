@@ -8691,9 +8691,10 @@ body .accent-font {
 #home #intro .text {
   background-color: #FEF7F2;
   color: #2D0042;
-  margin: 0 -3rem 5rem;
-  padding: 4rem 3rem;
   position: relative;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 6rem;
   -webkit-box-shadow: 0 0 1rem #2D0042;
   box-shadow: 0 0 1rem #2D0042;
 }
@@ -8888,5 +8889,136 @@ body .accent-font {
   font: 400 1.6rem/1 "Grand Hotel", cursive;
   font-size: 3rem;
   color: #51EBC8;
+}
+
+#about #personal {
+  padding: 6rem 1rem 8rem;
+  background-color: #FEF7F2;
+  color: #2D0042;
+  position: relative;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 6rem;
+  -webkit-box-shadow: 0 0 1rem #2D0042;
+  box-shadow: 0 0 1rem #2D0042;
+}
+
+#about #personal::before {
+  content: ' ';
+  display: block;
+  margin: 0 auto;
+  height: 2rem;
+  background: -webkit-gradient(linear, right top, left top, from(#51EBC8), to(rgba(81, 235, 200, 0.2)));
+  background: linear-gradient(to left, #51EBC8, rgba(81, 235, 200, 0.2));
+  -webkit-box-shadow: inset 0px 10px 5px -10px rgba(45, 0, 66, 0.75);
+  box-shadow: inset 0px 10px 5px -10px rgba(45, 0, 66, 0.75);
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  right: 0;
+}
+
+#about #personal .left h3 {
+  color: #2D0042;
+  margin-bottom: 2rem;
+}
+
+#about #personal .left > div:first-child {
+  margin-bottom: 4rem;
+}
+
+#about #personal .left > div:last-child {
+  margin-bottom: 4rem;
+}
+
+#about #personal .left > div:last-child .school .name {
+  font-weight: 700;
+}
+
+#about #personal .left > div:last-child .school:last-child {
+  margin-top: 2rem;
+}
+
+#about #personal .right {
+  border-top: 1px solid #980062;
+  text-align: center;
+}
+
+#about #personal .right .img-container {
+  width: 15rem;
+  height: 15rem;
+  background-color: #eee;
+  margin: 0 auto 2rem;
+}
+
+#about #personal .right p {
+  margin-bottom: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#about #skills {
+  padding: 6rem 0 8rem;
+}
+
+#about #skills .web-dev h3, #about #skills .design h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#about #skills .web-dev h3 span, #about #skills .design h3 span {
+  line-height: 1;
+  background-color: #FEF7F2;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 1rem;
+  padding: 0.5rem;
+}
+
+#about #skills .web-dev h3 span i, #about #skills .design h3 span i {
+  color: #2D0042;
+  font-size: 1.6rem;
+}
+
+#about #skills .web-dev > ul li, #about #skills .design > ul li {
+  margin-bottom: 2rem;
+}
+
+#about #skills .web-dev > ul li p, #about #skills .design > ul li p {
+  color: #FEF7F2;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+#about #skills .web-dev > ul li .bar, #about #skills .design > ul li .bar {
+  border-radius: 0.5em;
+  background-color: #2D0042;
+  height: 1rem;
+}
+
+#about #skills .web-dev > ul li .bar .inner, #about #skills .design > ul li .bar .inner {
+  border-radius: 0.5em;
+  display: block;
+  height: 1rem;
+  background-color: #51EBC8;
+  width: 50%;
+}
+
+#about #skills .web-dev {
+  margin-bottom: 6rem;
 }
 /*# sourceMappingURL=styles.css.map */
