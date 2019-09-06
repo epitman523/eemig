@@ -643,5 +643,68 @@ body {
         .web-dev {
             margin-bottom: 6rem;
         }
+        .ten {
+            width: 10%;
+        }
+        .twenty {
+            width: 20%;
+        }
+        .thirty {
+            width: 30%;
+        }
+        .forty {
+            width: 40%;
+        }
+        .fifty {
+            width: 50%;
+        }
+        .sixty {
+            width: 60%;
+        }
+        .seventy {
+            width: 70%;
+        }
+        .eighty {
+            width: 80%;
+        }
+        .ninety {
+            width: 60%;
+        }
+        .full {
+            width: 100%;
+        }
+    }
+    #experience {
+        padding: 6rem 0 8rem;
+
+        .jobs {
+            
+            li {
+                margin-bottom: 4rem;
+
+                h4 {
+                    margin-bottom: 0.5rem;
+                }
+                p {
+                    color: $accent;
+                    font-weight: 700;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        .duties {
+            li {
+                color: $white;
+                margin-bottom: 2rem;
+                @include flexbox;
+                &::before {
+                    content: "•";
+                    display: inline-block;
+                    color: $accent;
+                    margin-right: 1rem;
+                    
+                }
+            }
+        }
     }
 }
