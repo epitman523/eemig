@@ -8958,6 +8958,31 @@ body .accent-font {
   text-transform: uppercase;
 }
 
+@media (min-width: 769px) {
+  #about #personal {
+    padding: 8rem 1rem 10rem;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+  #about #personal .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  #about #personal .left {
+    width: calc(70% - 3rem);
+  }
+  #about #personal .right {
+    width: calc(30%);
+    border-top: 0;
+    border-left: 1px solid #980062;
+    padding-left: 1.5rem;
+  }
+}
+
 #about #skills {
   padding: 6rem 0 8rem;
 }

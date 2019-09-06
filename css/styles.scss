@@ -588,6 +588,25 @@ body {
                 text-transform: uppercase;
             }
         }
+        @include mq(md) {
+            padding: 8rem 1rem 10rem;
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+
+            .container {
+                @include flexbox;
+                @include justify-content(space-between);
+            }
+            .left {
+                width: calc(70% - 3rem);
+            }
+            .right {
+                width: calc(30%);
+                border-top: 0;
+                border-left: 1px solid $secondary;
+                padding-left: 1.5rem;
+            }
+        }
     }
     #skills {
         padding: 6rem 0 8rem;
