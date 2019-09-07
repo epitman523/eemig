@@ -8278,6 +8278,12 @@ body .container {
   }
 }
 
+@media (min-width: 1201px) {
+  body .container {
+    padding: 0 20rem;
+  }
+}
+
 body .show {
   display: block;
 }
@@ -8492,11 +8498,25 @@ body main .grad-bg {
   background: linear-gradient(320deg, #2D0042, #980062);
 }
 
+body main .grad-bg section {
+  padding: 6rem 0 8rem;
+}
+
 @media (min-width: 769px) {
-  body main {
-    border-bottom: 1.5rem solid #FEF7F2;
-    border-left: 1.5rem solid #FEF7F2;
-    border-right: 1.5rem solid #FEF7F2;
+  body main .grad-bg section {
+    padding: 8rem 0 10rem;
+  }
+}
+
+@media (min-width: 993px) {
+  body main .grad-bg section {
+    padding: 10rem 0 12rem;
+  }
+}
+
+@media (min-width: 1201px) {
+  body main .grad-bg section {
+    padding: 15rem 0 20rem;
   }
 }
 
@@ -8580,6 +8600,9 @@ body main #connect .h-line {
   body main #connect {
     padding: 10rem 8rem;
     border-top: 1.5rem solid #FEF7F2;
+    border-bottom: 1.5rem solid #FEF7F2;
+    border-left: 1.5rem solid #FEF7F2;
+    border-right: 1.5rem solid #FEF7F2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -8676,10 +8699,6 @@ body .accent-font {
   }
 }
 
-#home #intro {
-  padding: 10rem 0 20rem;
-}
-
 #home #intro .greeting {
   margin-bottom: 5rem;
 }
@@ -8726,9 +8745,6 @@ body .accent-font {
 }
 
 @media (min-width: 769px) {
-  #home #intro {
-    padding: 20rem 0 20rem;
-  }
   #home #intro h2 {
     font-size: 4.8rem;
   }
@@ -8774,10 +8790,6 @@ body .accent-font {
     margin-left: -9.5rem;
     padding: 10rem 9.5rem;
   }
-}
-
-#home #sel-work {
-  padding: 10rem 0 20rem;
 }
 
 #home #sel-work h2 {
@@ -8893,7 +8905,6 @@ body .accent-font {
 }
 
 #about #personal {
-  padding: 6rem 1rem 8rem;
   background-color: #FEF7F2;
   color: #2D0042;
   position: relative;
@@ -8981,10 +8992,6 @@ body .accent-font {
     border-left: 1px solid #980062;
     padding-left: 1.5rem;
   }
-}
-
-#about #skills {
-  padding: 6rem 0 8rem;
 }
 
 #about #skills .web-dev h3, #about #skills .design h3 {
@@ -9088,19 +9095,31 @@ body .accent-font {
   width: 100%;
 }
 
-#about #experience {
-  padding: 6rem 0 8rem;
+@media (min-width: 769px) {
+  #about #skills .container:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  #about #skills .web-dev, #about #skills .design {
+    width: calc(50% - 1.5rem);
+  }
 }
 
-#about #experience .jobs li {
-  margin-bottom: 4rem;
+#about #experience .jobs > li {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #980062;
 }
 
-#about #experience .jobs li h4 {
+#about #experience .jobs > li h4 {
   margin-bottom: 0.5rem;
 }
 
-#about #experience .jobs li p {
+#about #experience .jobs > li p {
   color: #51EBC8;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -9119,5 +9138,9 @@ body .accent-font {
   display: inline-block;
   color: #51EBC8;
   margin-right: 1rem;
+}
+
+#about #experience .duties li:last-child {
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */

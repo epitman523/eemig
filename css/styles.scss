@@ -35,6 +35,9 @@ body {
         @include mq(lg) {
             padding: 0 8rem;
         }
+        @include mq(xl) {
+            padding: 0 20rem;
+        }
     }
     .show {
         display: block;
@@ -201,17 +204,28 @@ body {
         }
     }
     main {
-        .grad-bg {
-            background: linear-gradient(320deg, $primary, $secondary);
-        }
         border-left: 1rem solid $white;
         border-right: 1rem solid $white;
         border-bottom: 1rem solid $white;
-        @include mq(md) {
-            border-bottom: 1.5rem solid $white;
-            border-left: 1.5rem solid $white;
-            border-right: 1.5rem solid $white;
+
+        
+
+        .grad-bg {
+            background: linear-gradient(320deg, $primary, $secondary);
+            section {
+                padding: 6rem 0 8rem;
+                @include mq(md) {
+                    padding: 8rem 0 10rem;
+                }
+                @include mq(lg) {
+                    padding: 10rem 0 12rem
+                }
+                @include mq(xl) {
+                    padding: 15rem 0 20rem;
+                }
+            }
         }
+        
         #hero {
             height: 100vh;
             margin-top: -5.7rem;
@@ -273,6 +287,9 @@ body {
             @include mq(md) {
                 padding: 10rem 8rem;
                 border-top: 1.5rem solid $white;
+                border-bottom: 1.5rem solid $white;
+                border-left: 1.5rem solid $white;
+                border-right: 1.5rem solid $white;
                 
                 @include flexbox;
                 @include justify-content(flex-end);
@@ -371,8 +388,6 @@ body {
         }
     }
     #intro {
-        padding: 10rem 0 20rem;
-
         .greeting {
             margin-bottom: 5rem;
             p {
@@ -397,7 +412,6 @@ body {
             }
         }
         @include mq(md) {
-            padding: 20rem 0 20rem;
             h2 {
                 font-size: 4.8rem;
             }
@@ -441,7 +455,6 @@ body {
         }
     }
     #sel-work {
-        padding: 10rem 0 20rem;
         h2 {
             margin: 0 2rem;
         }
@@ -548,7 +561,7 @@ body {
         }
     }
     #personal {
-        padding: 6rem 1rem 8rem;
+        
         @include white-panel;
         &::before {
             @include panel-bottom;
@@ -609,7 +622,6 @@ body {
         }
     }
     #skills {
-        padding: 6rem 0 8rem;
         
         .web-dev, .design {
             h3 {
@@ -692,14 +704,25 @@ body {
         .full {
             width: 100%;
         }
+        
+        @include mq(md) {
+            .container:last-child {
+                @include flexbox;
+                @include justify-content(space-between);
+            }
+            .web-dev, .design {
+                width: calc(50% - 1.5rem);
+            }
+        }
     }
     #experience {
-        padding: 6rem 0 8rem;
 
         .jobs {
             
-            li {
-                margin-bottom: 4rem;
+            > li {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid $secondary;
 
                 h4 {
                     margin-bottom: 0.5rem;
@@ -722,6 +745,9 @@ body {
                     color: $accent;
                     margin-right: 1rem;
                     
+                }
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
