@@ -8717,6 +8717,7 @@ body .accent-font {
   margin-bottom: 6rem;
   -webkit-box-shadow: 0 0 1rem #2D0042;
   box-shadow: 0 0 1rem #2D0042;
+  padding: 6rem 3rem;
 }
 
 #home #intro .text::before {
@@ -8732,7 +8733,7 @@ body .accent-font {
   bottom: -2rem;
   left: 0;
   right: 0;
-  width: 80%;
+  width: 90%;
 }
 
 #home #intro .text h3 {
@@ -8763,7 +8764,7 @@ body .accent-font {
   }
   #home #intro .text {
     width: 80%;
-    margin: 0 0 5rem -7.5rem;
+    margin: 0 0 10rem -1rem;
     padding: 8rem 6rem;
   }
   #home #intro .text::before {
