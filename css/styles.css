@@ -8485,6 +8485,7 @@ body header .menu button span {
     width: 7rem;
     height: 7rem;
     margin-top: -1.5rem;
+    font-size: 3.5rem;
   }
 }
 
@@ -8708,16 +8709,20 @@ body .accent-font {
   font-size: 3rem;
 }
 
+#home #intro .greeting span {
+  display: block;
+}
+
 #home #intro .text {
   background-color: #FEF7F2;
   color: #2D0042;
   position: relative;
   margin-left: -1rem;
-  margin-right: -1rem;
   margin-bottom: 6rem;
   -webkit-box-shadow: 0 0 1rem #2D0042;
   box-shadow: 0 0 1rem #2D0042;
   padding: 6rem 3rem;
+  margin-right: -1rem;
 }
 
 #home #intro .text::before {
@@ -8749,23 +8754,13 @@ body .accent-font {
   #home #intro h2 {
     font-size: 4.8rem;
   }
-  #home #intro .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
   #home #intro .greeting {
     width: 70%;
   }
   #home #intro .text {
     width: 80%;
-    margin: 0 0 10rem -1rem;
-    padding: 8rem 6rem;
+    margin-bottom: 10rem;
+    padding: 8rem 7rem;
   }
   #home #intro .text::before {
     width: 95%;
@@ -8774,8 +8769,11 @@ body .accent-font {
   #home #intro .img-container {
     width: 20%;
   }
-  #home #intro a {
-    margin: 0 auto;
+  #home #intro > .container:last-child {
+    text-align: center;
+  }
+  #home #intro > .container:last-child a {
+    display: inline-block;
   }
 }
 
@@ -8788,20 +8786,15 @@ body .accent-font {
     width: 50%;
   }
   #home #intro .text {
-    margin-left: -9.5rem;
-    padding: 10rem 9.5rem;
+    padding: 10rem 10rem 10rem 20rem;
   }
-}
-
-#home #sel-work h2 {
-  margin: 0 2rem;
 }
 
 #home #sel-work > .h-line {
   margin-left: 2rem;
 }
 
-#home #sel-work .container {
+#home #sel-work > .container:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8876,11 +8869,7 @@ body .accent-font {
 
 @media (min-width: 769px) {
   #home #sel-work h2 {
-    margin: 0 6rem;
     font-size: 4.8rem;
-  }
-  #home #sel-work > .h-line {
-    margin-left: 6rem;
   }
   #home #sel-work .work {
     width: calc(50% - 1.5rem);
@@ -8910,7 +8899,6 @@ body .accent-font {
   color: #2D0042;
   position: relative;
   margin-left: -1rem;
-  margin-right: -1rem;
   margin-bottom: 6rem;
   -webkit-box-shadow: 0 0 1rem #2D0042;
   box-shadow: 0 0 1rem #2D0042;
@@ -8992,6 +8980,12 @@ body .accent-font {
     border-top: 0;
     border-left: 1px solid #980062;
     padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 993px) {
+  #about #personal .left, #about #personal .right {
+    width: calc(50% - 1.5rem);
   }
 }
 

@@ -199,6 +199,7 @@ body {
                     width: 7rem;
                     height: 7rem;
                     margin-top: -1.5rem;
+                    font-size: 3.5rem;
                 }
             }
         }
@@ -394,11 +395,14 @@ body {
                 color: $accent;
                 font-size: 3rem;
             }
+            span {
+                display: block;
+            }
         }
         .text {
             @include white-panel;
             padding: 6rem 3rem;
-
+            margin-right: -1rem;
             &::before {
                 @include panel-bottom;
                 width: 90%;
@@ -415,18 +419,13 @@ body {
             h2 {
                 font-size: 4.8rem;
             }
-            .container {
-                @include flexbox;
-                @include flex-wrap(wrap);
-                @include justify-content(space-between);
-            }
             .greeting {
                 width: 70%;
             }
             .text {
                 width: 80%;
-                margin: 0 0 10rem -1rem;
-                padding: 8rem 6rem;
+                margin-bottom: 10rem;
+                padding: 8rem 7rem;
                 &::before {
                     width: 95%;
                     margin-left: -1rem;
@@ -435,8 +434,12 @@ body {
             .img-container{
                 width: 20%;
             }
-            a {
-                margin: 0 auto;
+            > .container:last-child {
+                text-align: center;
+
+                a {
+                    display: inline-block;
+                }
             }
             
         }
@@ -449,19 +452,15 @@ body {
                 width: 50%;
             }
             .text {
-                margin-left: -9.5rem;
-                padding: 10rem 9.5rem;
+                padding: 10rem 10rem 10rem 20rem;
             }
         }
     }
     #sel-work {
-        h2 {
-            margin: 0 2rem;
-        }
         > .h-line {
             margin-left: 2rem;
         }
-        .container {
+        > .container:last-child {
             @include flexbox;
             @include flex-wrap(wrap);
             @include justify-content(space-between);
@@ -524,11 +523,7 @@ body {
         }
         @include mq(md) {
             h2 {
-                margin: 0 6rem;
                 font-size: 4.8rem;
-            }
-            > .h-line {
-                margin-left: 6rem;
             }
             .work {
                 width: calc(50% - 1.5rem);
@@ -618,6 +613,11 @@ body {
                 border-top: 0;
                 border-left: 1px solid $secondary;
                 padding-left: 1.5rem;
+            }
+        }
+        @include mq(lg) {
+            .left, .right {
+                width: calc(50% - 1.5rem);
             }
         }
     }
