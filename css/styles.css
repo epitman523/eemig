@@ -8254,7 +8254,7 @@ html {
 }
 
 body {
-  font: 400 1.6rem/1.375 "Open Sans", sans-serif;
+  font: 400 1.6rem/1.6 "Open Sans", sans-serif;
   height: 100%;
   background-color: #2D0042;
   color: #2D0042;
@@ -8293,9 +8293,8 @@ body .hide {
 }
 
 body h1, body h2, body h3, body h4 {
-  font: 900 1.6rem/1 "Nunito Sans", sans-serif;
+  font: 900 1.6rem/1 "brandon-grotesque", sans-serif;
   text-transform: uppercase;
-  font-weight: 700;
   color: #FEF7F2;
 }
 
@@ -8382,7 +8381,7 @@ body #myNav.overlay .overlay-content {
 }
 
 body #myNav.overlay a {
-  font: 900 1.6rem/1 "Nunito Sans", sans-serif;
+  font: 900 1.6rem/1 "brandon-grotesque", sans-serif;
   padding: 0.8rem;
   text-decoration: none;
   font-size: 3.6rem;
@@ -8397,7 +8396,7 @@ body #myNav.overlay a:hover, body #myNav.overlay a:focus {
 }
 
 body #myNav.overlay a.closebtn {
-  font: 400 1.6rem/1.375 "Open Sans", sans-serif;
+  font: 400 1.6rem/1.6 "Open Sans", sans-serif;
   position: absolute;
   top: 0;
   right: 2rem;
@@ -8436,7 +8435,7 @@ body header .logo, body header .menu {
 }
 
 body header .logo span {
-  font: 900 1.6rem/1 "Nunito Sans", sans-serif;
+  font: 900 1.6rem/1 "brandon-grotesque", sans-serif;
   display: block;
   width: 5rem;
   height: 5rem;
